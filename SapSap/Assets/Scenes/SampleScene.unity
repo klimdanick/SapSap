@@ -249,14 +249,14 @@ MonoBehaviour:
   pondPrefab: {fileID: 919132149155446097, guid: af913cbc66f8c7e4d852ca6bd8c6af81, type: 3}
   grassPrefab: {fileID: 919132149155446097, guid: 611b1369064ace14e96e0b2bc10357ae, type: 3}
   waterPrefab: {fileID: 919132149155446097, guid: a2d82757588fad4488daf1926db6c579, type: 3}
-  width: 100
-  height: 100
+  width: 50
+  height: 50
   scale: 10
   seed: 0
   offset: 2.1
-  gThreshold: 0.4
+  gThreshold: 0.55
   pThreshold: 0
-  mThreshold: 0.6
+  mThreshold: 0.7
 --- !u!4 &314091495
 Transform:
   m_ObjectHideFlags: 0
@@ -265,7 +265,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314091493}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
