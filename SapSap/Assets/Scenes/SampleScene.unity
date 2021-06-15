@@ -254,7 +254,7 @@ MonoBehaviour:
   height: 20
   scale: 10
   seed: 0
-  offset: 2.2
+  offset: 2.1
   offsetX: 1.1
   gThreshold: 0.5
   pThreshold: 0
@@ -264,6 +264,8 @@ MonoBehaviour:
   mHeight: 1
   wHeight: 0
   sHeight: 0.2
+  iOff: 0
+  jOff: 0
 --- !u!4 &314091495
 Transform:
   m_ObjectHideFlags: 0
