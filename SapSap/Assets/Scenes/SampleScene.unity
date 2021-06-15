@@ -249,18 +249,21 @@ MonoBehaviour:
   pondPrefab: {fileID: 919132149155446097, guid: af913cbc66f8c7e4d852ca6bd8c6af81, type: 3}
   grassPrefab: {fileID: 919132149155446097, guid: 611b1369064ace14e96e0b2bc10357ae, type: 3}
   waterPrefab: {fileID: 919132149155446097, guid: a2d82757588fad4488daf1926db6c579, type: 3}
+  sandPrefab: {fileID: 919132149155446097, guid: c79ede3be20209a4299a7082a76708a9, type: 3}
   width: 20
   height: 20
-  scale: 5
+  scale: 10
   seed: 0
   offset: 2.2
   offsetX: 1.1
   gThreshold: 0.5
   pThreshold: 0
   mThreshold: 0.7
+  sThreshold: 0.4
   gHeight: 0.5
   mHeight: 1
   wHeight: 0
+  sHeight: 0.2
 --- !u!4 &314091495
 Transform:
   m_ObjectHideFlags: 0
