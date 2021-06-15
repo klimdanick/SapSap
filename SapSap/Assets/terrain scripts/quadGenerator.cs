@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class quadGenerator : MonoBehaviour
 {
     public GameObject mountainPrefab, pondPrefab, grassPrefab, waterPrefab;
     public int width, height, scale, seed;

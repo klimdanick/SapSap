@@ -242,21 +242,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 314091493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575b6a0e578291f43864764c7f7a9644, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f8b24f4d1381724daf0bd117dc2d778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mountainPrefab: {fileID: 919132149155446097, guid: 9b32b05d4ff9fa6468e88d9b5d3c5858, type: 3}
   pondPrefab: {fileID: 919132149155446097, guid: af913cbc66f8c7e4d852ca6bd8c6af81, type: 3}
   grassPrefab: {fileID: 919132149155446097, guid: 611b1369064ace14e96e0b2bc10357ae, type: 3}
   waterPrefab: {fileID: 919132149155446097, guid: a2d82757588fad4488daf1926db6c579, type: 3}
-  width: 50
-  height: 50
-  scale: 10
+  width: 20
+  height: 20
+  scale: 5
   seed: 0
-  offset: 2.1
-  gThreshold: 0.55
+  offset: 2.2
+  offsetX: 1.1
+  gThreshold: 0.5
   pThreshold: 0
   mThreshold: 0.7
+  gHeight: 0.5
+  mHeight: 1
+  wHeight: 0
 --- !u!4 &314091495
 Transform:
   m_ObjectHideFlags: 0
