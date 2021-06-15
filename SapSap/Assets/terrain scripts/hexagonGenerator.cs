@@ -48,7 +48,7 @@ public class hexagonGenerator : MonoBehaviour
 
             float x = i * offset + offsetX * j%2;
             float y = j * offset;
-            float z = noise > mThreshold ? mHeight : noise > gThreshold ? gHeight : noise > sThreshold ? sHeight : wHeight;
+            float z = noise > mThreshold ? noise+0.2f : noise > gThreshold ? gHeight : noise > sThreshold ? sHeight : wHeight;
             GameObject tileObject = Instantiate(tile, new Vector3(x, z, y), Quaternion.identity) as GameObject;
             tileObject.transform.parent = gameObject.transform;
         }
