@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class hexagonGenerator : MonoBehaviour
 {
-    public GameObject mountainPrefab, pondPrefab, grassPrefab, waterPrefab, sandPrefab;
+    public GameObject mountainPrefab, forestPrefab, grassPrefab, waterPrefab, sandPrefab;
     public int width, height, scale, seed;
     public float offset, offsetX;
-    public float gThreshold, pThreshold, mThreshold, sThreshold;
+    public float gThreshold, fThreshold, mThreshold, sThreshold;
     public float gHeight, mHeight, wHeight, sHeight;
     public float iOff, jOff;
     //gr
@@ -19,7 +19,10 @@ public class hexagonGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        jOff+=0.1f;
+        if (Input.GetKey(KeyCode.W)) jOff+=0.3f;
+        if (Input.GetKey(KeyCode.S)) jOff-=0.3f;
+        if (Input.GetKey(KeyCode.D)) iOff+=0.3f;
+        if (Input.GetKey(KeyCode.A)) iOff-=0.3f;
         removeChildObjects();
         generate();
     }
@@ -39,10 +42,13 @@ public class hexagonGenerator : MonoBehaviour
         
         for (float i = 0f; i < width; i++) for (float j = 0f; j < height; j++) {
             float noise = Mathf.PerlinNoise((i+(int)iOff)/scale + seed, (j+(int)jOff)/scale + seed);
+            float biomeNoise = Mathf.PerlinNoise((i+(int)iOff)/scale + seed + 1000, (j+(int)jOff)/scale + seed + 1000);
             GameObject tile;
             if (noise > mThreshold) tile = mountainPrefab;
-            else if (noise > gThreshold && false/*&& Random.Range(0f, 1f) > 0.5f*/) tile = pondPrefab;
-            else if (noise > gThreshold) tile = grassPrefab;
+            else if (noise > gThreshold) {
+                if (biomeNoise < fThreshold) tile = grassPrefab;
+                else tile = forestPrefab;
+            }
             else if (noise > sThreshold) tile = sandPrefab;
             else tile = waterPrefab;
 

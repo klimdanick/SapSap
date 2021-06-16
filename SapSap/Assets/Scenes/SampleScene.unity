@@ -245,8 +245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8b24f4d1381724daf0bd117dc2d778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mountainPrefab: {fileID: 919132149155446097, guid: 5db868489f85f9847b0f6bd0ac981da9, type: 3}
-  pondPrefab: {fileID: 919132149155446097, guid: af913cbc66f8c7e4d852ca6bd8c6af81, type: 3}
+  mountainPrefab: {fileID: 919132149155446097, guid: 9b32b05d4ff9fa6468e88d9b5d3c5858, type: 3}
+  forestPrefab: {fileID: 919132149155446097, guid: 5db868489f85f9847b0f6bd0ac981da9, type: 3}
   grassPrefab: {fileID: 919132149155446097, guid: 611b1369064ace14e96e0b2bc10357ae, type: 3}
   waterPrefab: {fileID: 919132149155446097, guid: a2d82757588fad4488daf1926db6c579, type: 3}
   sandPrefab: {fileID: 919132149155446097, guid: c79ede3be20209a4299a7082a76708a9, type: 3}
@@ -257,7 +257,7 @@ MonoBehaviour:
   offset: 2.1
   offsetX: 1.1
   gThreshold: 0.5
-  pThreshold: 0
+  fThreshold: 0.6
   mThreshold: 0.7
   sThreshold: 0.4
   gHeight: 0.5
@@ -356,10 +356,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660968725}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.39690763, y: 0, z: 0, w: 0.91785854}
+  m_LocalPosition: {x: 19.62, y: 19.97, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 46.77, y: 0, z: 0}
