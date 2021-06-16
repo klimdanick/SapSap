@@ -7,7 +7,7 @@ public class hexagonGenerator : MonoBehaviour
     public GameObject mountainPrefab, forestPrefab, grassPrefab, waterPrefab, sandPrefab;
     public int width, height, scale, seed;
     public float offset, offsetX;
-    public float gThreshold, fThreshold, mThreshold, sThreshold;
+    public float gThreshold, fThreshold, mThreshold, sThreshold, desertThreshold;
     public float gHeight, mHeight, wHeight, sHeight;
     public float iOff, jOff;
     //gr
@@ -46,8 +46,9 @@ public class hexagonGenerator : MonoBehaviour
             GameObject tile;
             if (noise > mThreshold) tile = mountainPrefab;
             else if (noise > gThreshold) {
-                if (biomeNoise < fThreshold) tile = grassPrefab;
-                else tile = forestPrefab;
+                if (biomeNoise > fThreshold) tile = forestPrefab;
+                else if (biomeNoise < desertThreshold) tile = sandPrefab;
+                else tile = grassPrefab;
             }
             else if (noise > sThreshold) tile = sandPrefab;
             else tile = waterPrefab;
