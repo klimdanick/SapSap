@@ -19,10 +19,10 @@ public class hexagonGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W)) jOff+=10f;
-        if (Input.GetKey(KeyCode.S)) jOff-=0.3f;
-        if (Input.GetKey(KeyCode.D)) iOff+=0.3f;
-        if (Input.GetKey(KeyCode.A)) iOff-=0.3f;
+        if (Input.GetKey(KeyCode.W)) jOff+=0.5f;
+        if (Input.GetKey(KeyCode.S)) jOff-=0.5f;
+        if (Input.GetKey(KeyCode.D)) iOff+=0.5f;
+        if (Input.GetKey(KeyCode.A)) iOff-=0.5f;
         removeChildObjects();
         generate();
     }
@@ -58,8 +58,8 @@ public class hexagonGenerator : MonoBehaviour
             float z = noise > mThreshold ? noise+0.2f : noise > gThreshold ? gHeight : noise > sThreshold ? sHeight : wHeight;
             GameObject tileObject = Instantiate(tile, new Vector3(x, z, y), Quaternion.identity) as GameObject;
             tileObject.transform.parent = gameObject.transform;
-            Debug.log((int)(Mathf.PerlinNoise((i+(int)iOff)/(scale*5), (j+(int)jOff)/(scale*5))*4)*90.0f);
-            tileObject.transform.Rotate(0.0f, (int)(Mathf.PerlinNoise((i+(int)iOff)/(scale*5), (j+(int)jOff)/(scale*5))*4)*90.0f, 0.0f, Space.Self);
+            /*Debug.Log((int)(Mathf.PerlinNoise((i+(int)iOff)/(scale*10), (j+(int)jOff)/(scale*10))*4)*90.0f);
+            tileObject.transform.Rotate(0.0f, (int)(Mathf.PerlinNoise((i+(int)iOff)/(scale*10), (j+(int)jOff)/(scale*10))*4)*90.0f, 0.0f, Space.Self);*/
         }
     }
 }

@@ -61,3 +61,7 @@ crashlytics-build.properties
 # Blender files
 *.blend
 
+*.meta
+SapSap/Assets/env/Materials/starmap_2020_8k.mat
+SapSap/Assets/env/starmap_2020_8k.exr
+*.mat

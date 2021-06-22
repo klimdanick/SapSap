@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 12e446b94c65e644d8c2ec19b6d5e442, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.060868897, g: 0.055851378, b: 0.052206106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -226,6 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 314091495}
   - component: {fileID: 314091494}
+  - component: {fileID: 314091496}
   m_Layer: 0
   m_Name: terrain
   m_TagString: Untagged
@@ -245,11 +246,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8b24f4d1381724daf0bd117dc2d778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mountainPrefab: {fileID: 919132149155446097, guid: 9b32b05d4ff9fa6468e88d9b5d3c5858, type: 3}
-  forestPrefab: {fileID: 919132149155446097, guid: 5db868489f85f9847b0f6bd0ac981da9, type: 3}
-  grassPrefab: {fileID: 919132149155446097, guid: 611b1369064ace14e96e0b2bc10357ae, type: 3}
-  waterPrefab: {fileID: 919132149155446097, guid: a2d82757588fad4488daf1926db6c579, type: 3}
-  sandPrefab: {fileID: 919132149155446097, guid: c79ede3be20209a4299a7082a76708a9, type: 3}
+  mountainPrefab: {fileID: 919132149155446097, guid: 3a9db9fe8f70bb34cbab7c923422ed6e, type: 3}
+  forestPrefab: {fileID: 919132149155446097, guid: dcdca8ddc28c40b458257c816d620639, type: 3}
+  grassPrefab: {fileID: 919132149155446097, guid: 9d88f30ff1d480547b647dcc7ce42afa, type: 3}
+  waterPrefab: {fileID: 919132149155446097, guid: b187a8360db4d0c4997cea410fd3836d, type: 3}
+  sandPrefab: {fileID: 919132149155446097, guid: c90c5dec4cc48e645b2bc82a98b77724, type: 3}
+  desertPrefab: {fileID: 919132149155446097, guid: fb8f6297ae1a8f14f823676c5a160678, type: 3}
   width: 20
   height: 20
   scale: 10
@@ -260,6 +262,7 @@ MonoBehaviour:
   fThreshold: 0.6
   mThreshold: 0.7
   sThreshold: 0.4
+  desertThreshold: 0.3
   gHeight: 0.5
   mHeight: 1
   wHeight: 0
@@ -280,6 +283,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &314091496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314091493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3056e1df8f265ec498d5a7048a7bbe6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &660968725
 GameObject:
   m_ObjectHideFlags: 0
