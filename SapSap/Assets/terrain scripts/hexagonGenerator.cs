@@ -5,6 +5,7 @@ using UnityEngine;
 public class hexagonGenerator : MonoBehaviour
 {
     public GameObject mountainPrefab, forestPrefab, grassPrefab, waterPrefab, sandPrefab, desertPrefab;
+    public GameObject tilePrefab;
     public int width, height, scale, seed;
     public float offset, offsetX;
     public float gThreshold, fThreshold, mThreshold, sThreshold, desertThreshold;
@@ -14,17 +15,19 @@ public class hexagonGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        removeChildObjects();
+        generate();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W)) jOff+=0.5f;
+        /*if (Input.GetKey(KeyCode.W)) jOff+=0.5f;
         if (Input.GetKey(KeyCode.S)) jOff-=0.5f;
         if (Input.GetKey(KeyCode.D)) iOff+=0.5f;
         if (Input.GetKey(KeyCode.A)) iOff-=0.5f;
         removeChildObjects();
-        generate();
+        generate();*/
     }
     
     void removeChildObjects() {
@@ -56,8 +59,9 @@ public class hexagonGenerator : MonoBehaviour
             float x = i * offset + offsetX * j%2;
             float y = j * offset;
             float z = noise > mThreshold ? noise+0.2f : noise > gThreshold ? gHeight : noise > sThreshold ? sHeight : wHeight;
-            GameObject tileObject = Instantiate(tile, new Vector3(x, z, y), Quaternion.identity) as GameObject;
+            GameObject tileObject = Instantiate(tilePrefab, new Vector3(x, z, y), Quaternion.identity) as GameObject;
             tileObject.transform.parent = gameObject.transform;
+            tileObject.transform.GetComponent<tileProperties>().setModel(tile);
             /*Debug.Log((int)(Mathf.PerlinNoise((i+(int)iOff)/(scale*10), (j+(int)jOff)/(scale*10))*4)*90.0f);
             tileObject.transform.Rotate(0.0f, (int)(Mathf.PerlinNoise((i+(int)iOff)/(scale*10), (j+(int)jOff)/(scale*10))*4)*90.0f, 0.0f, Space.Self);*/
         }
